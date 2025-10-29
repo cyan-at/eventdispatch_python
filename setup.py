@@ -17,9 +17,14 @@ setup(
     author='Charlie Yan',
     author_email='cyanatg@gmail.com',
     license='Apache-2.0',
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
     maintainer='Charlie Yan',
     maintainer_email='cyanatg@gmail.com',
-    packages=find_packages(),
+    packages=find_packages(exclude=['test']),
     entry_points=dict(
         console_scripts=[
             'eventdispatch_example1=eventdispatch.example1:main',
